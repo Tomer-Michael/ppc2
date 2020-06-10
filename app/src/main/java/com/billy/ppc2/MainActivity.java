@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
             unsetHomeLocationButton.setVisibility(View.INVISIBLE);
         });
 
-        findViewById(R.id.locationButton).setOnClickListener(v -> {
+        TextView trackingToggler = findViewById(R.id.locationButton);
+        trackingToggler.setOnClickListener(v -> {
             boolean hasPermission =
                     (ActivityCompat.checkSelfPermission(getApplicationContext(),
                             Manifest.permission.ACCESS_FINE_LOCATION)) == PackageManager.PERMISSION_GRANTED
@@ -62,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
                             Manifest.permission.ACCESS_COARSE_LOCATION)) == PackageManager.PERMISSION_GRANTED;
             if (hasPermission) {
                 locationTracker.toggleIsTracking();
+                String text = locationTracker.isTracking() ? "Stop Tracking" : "Start Tracking";
+                trackingToggler.setText(text);
             } else {
                 ActivityCompat.requestPermissions(MainActivity.this, new String[]
                                 {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},
