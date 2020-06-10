@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
             final double longitude = intent.getDoubleExtra("longitude", 0);
             final double latitude = intent.getDoubleExtra("latitude", 0);
 
-            LatLongAccurText.setText(String.format("Latitude is:\n%s\nLongitude is: %s\nAccuracy is: %s\n",
+            LatLongAccurText.setText(String.format("Latitude is: %s\nLongitude is: %s\nAccuracy is: %s\n",
                     latitude, longitude, accuracy));
 
             if (locationTracker.isTracking() && accuracy < 50) {
