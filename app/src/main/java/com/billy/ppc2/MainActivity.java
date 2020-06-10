@@ -138,7 +138,6 @@ public class MainActivity extends AppCompatActivity {
                     editor.apply();
                     ((TextView) findViewById(R.id.HomeText))
                             .setText(String.format("Your home is at:\nLongitude: %s\nLatitude: %s\n", longitude, latitude));
-                    setHomeLocationButton.setVisibility(View.INVISIBLE);
                     unsetHomeLocationButton.setVisibility(View.VISIBLE);
                 }
             });
