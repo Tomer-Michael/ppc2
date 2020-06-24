@@ -32,9 +32,9 @@
     <Button
         android:id="@+id/locationButton"
         android:layout_width="200dp"
-        android:layout_height="60dp"
+        android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:text="Start tracking"
         app:layout_constraintBottom_toTopOf="@id/setHomeButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,9 +43,9 @@
     <Button
         android:id="@+id/setHomeButton"
         android:layout_width="200dp"
-        android:layout_height="60dp"
+        android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:text="Set location as home"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@id/clearHomeButton"
@@ -55,13 +55,54 @@
     <Button
         android:id="@+id/clearHomeButton"
         android:layout_width="200dp"
-        android:layout_height="60dp"
+        android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
-        android:text="Unset location as home"
+        android:layout_marginBottom="10dp"
+        android:text="Unset as home"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/setSMSButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/setSMSButton"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="set sms number"
+        app:layout_constraintBottom_toTopOf="@id/testSMSButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/deletePhoneNumber"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="delete phone number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/testSMSButton"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="test sms"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"
+        />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
